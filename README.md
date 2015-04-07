@@ -18,13 +18,13 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
 
 ## Usage
 
-* Install Zabbix Agent with default settings
+* Install Samba with default settings
 
 ~~~
     class { 'fndiaz_samba': }
 ~~~
 
-* Instal Zabbix Agent with some arguments
+* Instal Samba and define share folder
 
 ~~~
     class {'fndiaz_samba':
@@ -36,6 +36,27 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
         share_user     => 'admin',
     }
 ~~~
+
+* Instal Samba with custom file conf
+
+~~~
+    class {'fndiaz_samba':
+        custom_file => true
+        file => 'fndiaz_samba/custom_file.conf'
+
+    }
+~~~
+
+* Instal Samba and create user
+
+~~~
+    class {'fndiaz_samba':
+        user_name => 'admin'
+        user_password => '123456'
+
+    }
+~~~
+
 
 ## Limitations
 
