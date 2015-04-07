@@ -24,6 +24,15 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
     class { 'fndiaz_samba': }
 ~~~
 
+* Instal Samba with services arguments
+
+~~
+    class {'fndiaz_samba':
+        ensure => running
+        enable => true
+    }
+~~
+
 * Instal Samba and define share folder
 
 ~~~
@@ -43,7 +52,6 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
     class {'fndiaz_samba':
         custom_file => true
         file => 'fndiaz_samba/custom_file.conf'
-
     }
 ~~~
 
@@ -53,7 +61,6 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
     class {'fndiaz_samba':
         user_name => 'admin'
         user_password => '123456'
-
     }
 ~~~
 
