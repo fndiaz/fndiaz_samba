@@ -26,12 +26,12 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
 
 * Instal Samba with services arguments
 
-~~
+~~~
     class {'fndiaz_samba':
         ensure => running
         enable => true
     }
-~~
+~~~
 
 * Instal Samba and define share folder
 
