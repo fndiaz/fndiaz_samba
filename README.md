@@ -46,7 +46,7 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
     }
 ~~~
 
-* Instal Samba with custom file conf
+* Instal Samba with custom file conf (add file in template folder)
 
 ~~~
     class {'fndiaz_samba':
