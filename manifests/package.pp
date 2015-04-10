@@ -1,6 +1,6 @@
-class fndiaz_samba::package {
+class samba::package {
 
-    package { $::fndiaz_samba::package_name:
+    package { $::samba::package_name:
         ensure => present,
     }
 }

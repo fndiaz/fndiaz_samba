@@ -1,11 +1,11 @@
-class fndiaz_samba::service {
+class samba::service {
 
-    service { $::fndiaz_samba::service_name:
-        ensure  => $::fndiaz_samba::ensure,
-        enable  => $::fndiaz_samba::enable,
+    service { $::samba::service_name:
+        ensure  => $::samba::ensure,
+        enable  => $::samba::enable,
         hasstatus   => true,
         hasrestart => true,
-        require => Class[fndiaz_samba::package],
+        require => Class[samba::package],
     }
 
 }

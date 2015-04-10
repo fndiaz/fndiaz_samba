@@ -1,37 +1,37 @@
-# == Class: fndiaz_samba
+# == Class: init samba
 #
 # Módulo Samba
 #
-class fndiaz_samba (
+class samba (
 
-$ensure         = $fndiaz_samba::params::ensure,
-$enable         = $fndiaz_samba::params::enable,
-$file_conf      = $fndiaz_samba::params::file_conf,
-$share_name     = $fndiaz_samba::params::share_name,
-$share_comment  = $fndiaz_samba::params::share_comment,
-$share_path      = $fndiaz_samba::params::share_path,
-$share_readonly = $fndiaz_samba::params::share_readonly,
-$share_public   = $fndiaz_samba::params::share_public,
-$share_user     = $fndiaz_samba::params::share_user,
-$user_name      = $fndiaz_samba::params::user_name,
-$user_password  = $fndiaz_samba::params::user_password,
-$package_name   = $fndiaz_samba::params::package_name,
-$service_name   = $fndiaz_samba::params::service_name,
-$template       = $fndiaz_samba::params::template,
-$custom_file    = $fndiaz_samba::params::custom_file,
-$file           = $fndiaz_samba::params::file
+$ensure         = $samba::params::ensure,
+$enable         = $samba::params::enable,
+$file_conf      = $samba::params::file_conf,
+$share_name     = $samba::params::share_name,
+$share_comment  = $samba::params::share_comment,
+$share_path     = $samba::params::share_path,
+$share_readonly = $samba::params::share_readonly,
+$share_public   = $samba::params::share_public,
+$share_user     = $samba::params::share_user,
+$user_name      = $samba::params::user_name,
+$user_password  = $samba::params::user_password,
+$package_name   = $samba::params::package_name,
+$service_name   = $samba::params::service_name,
+$template       = $samba::params::template,
+$custom_file    = $samba::params::custom_file,
+$file           = $samba::params::file
 
-)inherits fndiaz_samba::params
+)inherits samba::params
 {
 
 
-include fndiaz_samba::package
-include fndiaz_samba::service
-include fndiaz_samba::file
+include samba::package
+include samba::service
+include samba::file
 
 if $user_name != ''{
     notify { "user samba: $user_name": }
-    include fndiaz_samba::user
+    include samba::user
 }
 
 #$password = 'your_plain_text_password'

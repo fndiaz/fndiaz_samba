@@ -1,14 +1,24 @@
 {
   "name": "fndiaz-samba",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "fndiaz",
-  "summary": "Module Puppet Samba",
+  "summary": "Simple Module Puppet Samba",
   "license": "Apache 2.0",
-  "source": "",
-  "project_page": null,
-  "issues_url": null,
+  "source": "https://github.com/fndiaz/fndiaz_samba",
+  "project_page": "https://forge.puppetlabs.com/fndiaz/fndiaz-samba",
+  "issues_url": "https://github.com/fndiaz/fndiaz_samba",
+  "tags": ["samba"],
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
-  ]
+  ],
+  "operatingsystem_support": [
+    {
+    "operatingsystem":"Debian",
+    "operatingsystemrelease":[ "6.0", "7.0" ]
+    },
+    {
+    "operatingsystem": "Ubuntu",
+    "operatingsystemrelease": [ "12.04", "14.04" ]
+    }
+   ]
 }
-

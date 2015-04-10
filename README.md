@@ -1,4 +1,4 @@
-# fndiaz_samba
+# samba
 
 #### Table of Contents
 
@@ -14,20 +14,20 @@ Made by Fernando Vieira - fndiaz
 
 ## Setup
 
-To install the correct Samba package on your system, include the 'fndiaz_samba : include fndiaz_samba
+To install the correct Samba package on your system, select the required arguments
 
 ## Usage
 
 * Install Samba with default settings
 
 ~~~
-    class { 'fndiaz_samba': }
+    class { 'samba': }
 ~~~
 
 * Instal Samba with services arguments
 
 ~~~
-    class {'fndiaz_samba':
+    class {'samba':
         ensure => running
         enable => true
     }
@@ -36,7 +36,7 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
 * Instal Samba and define share folder
 
 ~~~
-    class {'fndiaz_samba':
+    class {'samba':
         share_name => 'Share name',
         share_comment  => 'Folder comment',
         share_path     => '/tmp/teste',
@@ -49,16 +49,16 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
 * Instal Samba with custom file conf (add file in template folder)
 
 ~~~
-    class {'fndiaz_samba':
+    class {'samba':
         custom_file => true
-        file => 'fndiaz_samba/custom_file.conf'
+        file => 'samba/custom_file.conf'
     }
 ~~~
 
 * Instal Samba and create user
 
 ~~~
-    class {'fndiaz_samba':
+    class {'samba':
         user_name => 'admin'
         user_password => '123456'
     }
@@ -68,6 +68,6 @@ To install the correct Samba package on your system, include the 'fndiaz_samba :
 ## Limitations
 
 * Debian 6, 7
-* Ubuntu 10.04, 12.04, 14.04
+* Ubuntu 10.04, 11.04., 12.04, 14.04
 
 
